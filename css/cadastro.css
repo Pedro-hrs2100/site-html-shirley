@@ -1,0 +1,312 @@
+/* Importação de fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuração global */
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/*----------- Logo / Cabeçalho ---------*/
+
+.logo {
+    background-color: #F07D0B;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    margin: 20px 0 15px;
+}
+
+
+/*----------- Menu / Header -----------*/
+
+.menu {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 30px;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    border-top: 5px solid #F07D0B;
+}
+
+
+/*------- Cadastro -------*/
+
+.main {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #eeeeee;
+    padding: 40px;
+    /* Espaçamento interno */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    /* Largura máxima */
+    min-height: 500px;
+    /* Altura mínima */
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    /* Espaçamento entre os campos */
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    /* Espaçamento horizontal entre os campos */
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-group.full-width {
+    flex: 90%;
+    margin-top: 20px;
+    margin-right: 15px;
+    /* Espaçamento adicional para campos de largura total */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+
+/* Estilo dos inputs */
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    /* Bordas arredondadas */
+    background-color: #f57c00;
+    /* Fundo laranja */
+    color: #fff;
+    /* Cor do texto */
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input::placeholder {
+    color: #fff;
+    /* Cor do texto do placeholder */
+    opacity: 0.8;
+    /* Deixa o placeholder mais suave */
+}
+
+input:focus {
+    background-color: #e66a00;
+    /* Fundo laranja mais escuro ao focar */
+    transform: scale(1.02);
+    /* Leve aumento ao focar */
+}
+
+
+/* Botão Concluir */
+
+.btn-concluir {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f57c00;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-concluir:hover {
+    background-color: #e66a00;
+    transform: scale(1.05);
+    /* Leve aumento no tamanho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra */
+}
+
+.btn-concluir:active {
+    transform: scale(0.95);
+    /* Leve redução ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Reduz a sombra ao clicar */
+}
+
+
+/* Responsividade */
+
+
+/* Para telas médias (tablets e dispositivos similares) */
+
+@media (max-width: 1024px) {
+    .menu ul {
+        justify-content: center;
+        /* Centraliza o menu */
+        gap: 10px;
+        /* Reduz o espaçamento entre os itens */
+    }
+    .container {
+        padding: 30px;
+        /* Reduz o espaçamento interno */
+        max-width: 700px;
+        /* Reduz a largura máxima */
+        min-height: 500px;
+        /* Reduz a altura mínima */
+    }
+    h1 {
+        font-size: 1.8rem;
+        /* Reduz o tamanho do título */
+    }
+    .form-row {
+        flex-direction: column;
+        /* Empilha os campos verticalmente */
+        gap: 15px;
+        /* Reduz o espaçamento entre os campos */
+    }
+}
+
+
+/* Para telas pequenas (smartphones) */
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        /* Empilha os itens do menu */
+        gap: 5px;
+        /* Reduz ainda mais o espaçamento */
+    }
+    .container {
+        padding: 20px;
+        /* Reduz o espaçamento interno */
+        max-width: 90%;
+        /* Usa quase toda a largura da tela */
+        min-height: auto;
+        /* Remove a altura mínima fixa */
+    }
+    h1 {
+        font-size: 1.5rem;
+        /* Reduz ainda mais o tamanho do título */
+    }
+    .form-cadastro {
+        gap: 20px;
+        /* Ajusta o espaçamento entre os campos */
+    }
+    .btn-concluir {
+        font-size: 1rem;
+        /* Reduz o tamanho do botão */
+        padding: 8px;
+        /* Ajusta o espaçamento interno do botão */
+    }
+}
+
+
+/* Para telas muito pequenas (menos de 480px) */
+
+@media (max-width: 480px) {
+    .menu ul {
+        text-align: center;
+        /* Centraliza o menu */
+    }
+    .container {
+        padding: 15px;
+        /* Reduz ainda mais o espaçamento interno */
+        max-width: 100%;
+        /* Usa toda a largura da tela */
+    }
+    h1 {
+        font-size: 1.2rem;
+        /* Reduz o tamanho do título */
+    }
+    input {
+        font-size: 0.9rem;
+        /* Reduz o tamanho do texto nos campos */
+        padding: 8px;
+        /* Ajusta o espaçamento interno dos campos */
+    }
+    .btn-concluir {
+        font-size: 0.9rem;
+        /* Reduz o tamanho do botão */
+        padding: 6px;
+        /* Ajusta o espaçamento interno do botão */
+    }
+}
+
+.rodape {
+    background-color: #F07D0B;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    align-items: end;
+}
+
+.rodape p {
+    font-size: 1.0em;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rodape img {
+    width: 120px;
+    margin: 10px 0 15px;
+}

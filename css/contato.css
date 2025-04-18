@@ -1,0 +1,184 @@
+/* Importação de fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuração global */
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/*----------- Logo / Cabeçalho ---------*/
+
+.logo {
+    background-color: #F07D0B;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    margin: 20px 0 15px;
+}
+
+
+/*----------- Menu / Header -----------*/
+
+.menu {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 30px;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    border-top: 5px solid #F07D0B;
+}
+
+
+/*----------- Banner -----------*/
+
+.banner-contato img {
+    width: 100%;
+}
+
+
+/*----------- Localização -----------*/
+
+.localizacao {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.localizacao iframe {
+    width: 1000px;
+    height: 450px;
+}
+
+.localizacao h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.localizacao p {
+    font-size: 2em;
+    margin-top: 35px;
+    font-weight: bolder;
+}
+
+
+/*----------- Rodapé -----------*/
+
+.rodape {
+    background-color: #F07D0B;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    align-items: end;
+}
+
+.rodape p {
+    font-size: 1.0em;
+    text-transform: uppercase;
+    padding: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rodape img {
+    width: 120px;
+    margin: 10px 0 15px;
+}
+
+
+/*----------- Responsividade -----------*/
+
+@media (max-width: 1200px) {
+    .localizacao iframe {
+        width: 90%;
+        height: 400px;
+    }
+    .menu ul {
+        gap: 15px;
+        margin-right: 20px;
+    }
+    .menu {
+        font-size: 1.2em;
+        padding: 20px;
+    }
+    .localizacao h1 {
+        font-size: 2em;
+    }
+    .localizacao p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .menu {
+        text-align: center;
+        padding: 15px;
+    }
+    .localizacao iframe {
+        width: 100%;
+        height: 300px;
+    }
+    .localizacao h1 {
+        font-size: 1.8em;
+    }
+    .localizacao p {
+        font-size: 1.2em;
+    }
+    .rodape p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px;
+    }
+    .menu {
+        font-size: 1em;
+        padding: 10px;
+    }
+    .localizacao iframe {
+        height: 200px;
+    }
+    .localizacao h1 {
+        font-size: 1.5em;
+    }
+    .localizacao p {
+        font-size: 1em;
+    }
+    .rodape img {
+        width: 80px;
+    }
+}
